@@ -1,14 +1,10 @@
-name: cplx_numbers-environment
+name: cplx_root
 channels:
   - conda-forge
+  - defaults
 dependencies:
-  - python
-  - numpy
+  - python=3.8
   - matplotlib
-  - ipywidgets
-  - time
-  - math
-  - threading
-  - ctypes
-  - re
-  
+  - ipympl
+  - jupyterlab
+  - pip-tools
