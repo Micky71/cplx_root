@@ -1,0 +1,14 @@
+name: cplx_numbers-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - ipywidgets
+  - time
+  - math
+  - threading
+  - ctypes
+  - re
+  
