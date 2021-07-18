@@ -8,3 +8,4 @@ dependencies:
   - ipympl
   - jupyterlab
   - pip-tools
+prefix: C:\Users\Micky\anaconda3\envs\cplx_root

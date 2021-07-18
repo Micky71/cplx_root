@@ -50,7 +50,7 @@ inf = np.inf
 # In[4]:
 
 
-get_ipython().run_cell_magic('html', '', '<style>\n    .bold_text{\n        color: black;\n        font-weight: bold;\n    }\n    .error_text{\n        color: red;\n        font-weight: bold;\n    }\n    .input_field{\n        border: 2px solid black;\n    }\n    .input_error{\n        border: 4px solid #F00;\n    }\n    .help{\n        color: #007;\n        background-color: #CFC;\n    }\n    .shadow{\n        box-shadow: 8px 8px 10px #444\n    }\n    .rational_widget{\n        background-color: #CCF;\n        border: #99F;\n    }\n    .complex_widget{\n        background-color: #FFA;\n        border: #FDA;\n    }\n</style>')
+get_ipython().run_cell_magic('html', '', '<style>\n    .bold_text{\n        color: black;\n        font-weight: bold;\n    }\n    .error_text{\n        color: red;\n        font-weight: bold;\n    }\n    .input_field{\n        border: 2px solid black;\n    }\n    .input_error{\n        border: 4px solid #F00;\n    }\n    .help{\n        color: #007;\n        background-color: #CFC;\n    }\n    .shadow{\n        box-shadow: 8px 8px 10px #444\n    }\n    .rational_widget{\n        background-color: #CDF; \n        border: 4px solid #48F;\n    }\n    .complex_widget{\n        background-color: #FFA;\n        border: 4px solid #FDA;\n    }\n</style>')
 
 
 # In[5]:
@@ -101,14 +101,14 @@ def precision(fp, prec=2, rnd=True, valid_types={int,float,complex}):
         return calc(fp)
 
 
-# In[8]:
+# In[ ]:
 
 
 if main:
     print(precision(123e-6,2))
 
 
-# In[9]:
+# In[ ]:
 
 
 def greatest_common_factor(a, b):
@@ -119,14 +119,14 @@ def greatest_common_factor(a, b):
     return a
 
 
-# In[10]:
+# In[ ]:
 
 
 if main:
     print(f"gcf(123,7):{greatest_common_factor(124,12):+g}")
 
 
-# In[11]:
+# In[ ]:
 
 
 def text_to_html(text: str):
@@ -135,7 +135,7 @@ def text_to_html(text: str):
     return text.replace('\n','<br>')
 
 
-# In[12]:
+# In[ ]:
 
 
 def get_proper_frac(numtor, dentor, shorten=False, mult=1):
@@ -156,7 +156,7 @@ if main:
     display(get_proper_frac(370.5,180, mult=2))
 
 
-# In[13]:
+# In[ ]:
 
 
 def expression_to_value(expr_str, valid_types={int, float}):
@@ -193,7 +193,7 @@ if main:
     display(expression_to_value("fact(4)+sin(rad(30))"))
 
 
-# In[14]:
+# In[ ]:
 
 
 class Complex(object):
@@ -365,7 +365,7 @@ if main:
     display(widgets.VBox([w1,w2]))
 
 
-# In[15]:
+# In[ ]:
 
 
 class ComplexWidget(object):
@@ -565,14 +565,14 @@ class ComplexWidget(object):
             return "ComplexWidget: init error"
 
 
-# In[16]:
+# In[ ]:
 
 
 if main:
     display(ComplexWidget().get_widget())
 
 
-# In[17]:
+# In[ ]:
 
 
 class Rational(object):
@@ -738,7 +738,7 @@ class Rational(object):
             return "Rational: init - error"
 
 
-# In[18]:
+# In[ ]:
 
 
 if main:
@@ -746,7 +746,7 @@ if main:
     display(widgets.HTMLMath(rat_num.get_latex()[0][:-1] + r"\quad" + rat_num.get_latex()[1][1:]))
 
 
-# In[19]:
+# In[ ]:
 
 
 class RationalWidget(object):
@@ -961,7 +961,7 @@ class RationalWidget(object):
             return "RationalWidget, init error"
 
 
-# In[20]:
+# In[ ]:
 
 
 if main:
@@ -986,7 +986,13 @@ if main:
     wdgt2.observe(observer)
 
 
-# In[21]:
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 class Interruptable_thread(threading.Thread):
@@ -1022,7 +1028,7 @@ class Interruptable_thread(threading.Thread):
             print('Exception raise failure')
 
 
-# In[22]:
+# In[ ]:
 
 
 if main:
@@ -1049,7 +1055,7 @@ if main:
     print("End")
 
 
-# In[23]:
+# In[ ]:
 
 
 def colorstr_to_floats(color):
@@ -1080,7 +1086,7 @@ def colorstr_to_floats(color):
     return floats
 
 
-# In[24]:
+# In[ ]:
 
 
 def floats_to_colorstr(floats):
@@ -1101,7 +1107,7 @@ def floats_to_colorstr(floats):
     return colorstr
 
 
-# In[25]:
+# In[ ]:
 
 
 def brighten_color(color, brightness):
@@ -1112,14 +1118,14 @@ def brighten_color(color, brightness):
     
 
 
-# In[26]:
+# In[ ]:
 
 
 if main:
     print(floats_to_colorstr(colorstr_to_floats("#00a005")))
 
 
-# In[29]:
+# In[ ]:
 
 
 if main:
