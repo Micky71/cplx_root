@@ -1,2 +1,2 @@
 # cplx_root
-Shows complex numbers with rational exponent 
+Shows real exponentials of a complex number 
