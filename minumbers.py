@@ -101,14 +101,14 @@ def precision(fp, prec=2, rnd=True, valid_types={int,float,complex}):
         return calc(fp)
 
 
-# In[ ]:
+# In[8]:
 
 
 if main:
     print(precision(123e-6,2))
 
 
-# In[ ]:
+# In[9]:
 
 
 def greatest_common_factor(a, b):
@@ -119,14 +119,14 @@ def greatest_common_factor(a, b):
     return a
 
 
-# In[ ]:
+# In[10]:
 
 
 if main:
     print(f"gcf(123,7):{greatest_common_factor(124,12):+g}")
 
 
-# In[ ]:
+# In[11]:
 
 
 def text_to_html(text: str):
@@ -135,7 +135,7 @@ def text_to_html(text: str):
     return text.replace('\n','<br>')
 
 
-# In[ ]:
+# In[12]:
 
 
 def get_proper_frac(numtor, dentor, shorten=False, mult=1):
@@ -156,7 +156,7 @@ if main:
     display(get_proper_frac(370.5,180, mult=2))
 
 
-# In[ ]:
+# In[13]:
 
 
 def expression_to_value(expr_str, valid_types={int, float}):
@@ -193,7 +193,7 @@ if main:
     display(expression_to_value("fact(4)+sin(rad(30))"))
 
 
-# In[ ]:
+# In[14]:
 
 
 class Complex(object):
@@ -365,7 +365,7 @@ if main:
     display(widgets.VBox([w1,w2]))
 
 
-# In[ ]:
+# In[15]:
 
 
 class ComplexWidget(object):
@@ -565,14 +565,14 @@ class ComplexWidget(object):
             return "ComplexWidget: init error"
 
 
-# In[ ]:
+# In[16]:
 
 
 if main:
     display(ComplexWidget().get_widget())
 
 
-# In[ ]:
+# In[17]:
 
 
 class Rational(object):
@@ -738,7 +738,7 @@ class Rational(object):
             return "Rational: init - error"
 
 
-# In[ ]:
+# In[18]:
 
 
 if main:
@@ -746,7 +746,7 @@ if main:
     display(widgets.HTMLMath(rat_num.get_latex()[0][:-1] + r"\quad" + rat_num.get_latex()[1][1:]))
 
 
-# In[ ]:
+# In[19]:
 
 
 class RationalWidget(object):
@@ -961,7 +961,7 @@ class RationalWidget(object):
             return "RationalWidget, init error"
 
 
-# In[ ]:
+# In[20]:
 
 
 if main:
@@ -992,7 +992,7 @@ if main:
 
 
 
-# In[ ]:
+# In[21]:
 
 
 class Interruptable_thread(threading.Thread):
@@ -1028,7 +1028,7 @@ class Interruptable_thread(threading.Thread):
             print('Exception raise failure')
 
 
-# In[ ]:
+# In[22]:
 
 
 if main:
@@ -1055,7 +1055,7 @@ if main:
     print("End")
 
 
-# In[ ]:
+# In[23]:
 
 
 def colorstr_to_floats(color):
@@ -1086,7 +1086,7 @@ def colorstr_to_floats(color):
     return floats
 
 
-# In[ ]:
+# In[24]:
 
 
 def floats_to_colorstr(floats):
@@ -1107,7 +1107,7 @@ def floats_to_colorstr(floats):
     return colorstr
 
 
-# In[ ]:
+# In[25]:
 
 
 def brighten_color(color, brightness):
@@ -1118,14 +1118,14 @@ def brighten_color(color, brightness):
     
 
 
-# In[ ]:
+# In[26]:
 
 
 if main:
     print(floats_to_colorstr(colorstr_to_floats("#00a005")))
 
 
-# In[ ]:
+# In[27]:
 
 
 if main:
