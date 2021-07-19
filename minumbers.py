@@ -998,7 +998,7 @@ if main:
 class Interruptable_thread(threading.Thread):
     
     def __init__(self, fcn, *args, **kwargs):
-        threading.Thread.__init__(self)
+        threading.Thread.__init__(self, daemon=True)
         self.__fcn = fcn
         self.__args = args
         self.__kwargs = kwargs
