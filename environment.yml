@@ -8,4 +8,4 @@ dependencies:
   - ipympl
   - jupyterlab
   - pip-tools
-
+  - appmode
