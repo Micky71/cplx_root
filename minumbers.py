@@ -193,7 +193,7 @@ if main:
     display(expression_to_value("fact(4)+sin(rad(30))"))
 
 
-# In[14]:
+# In[1]:
 
 
 class Complex(object):
@@ -303,7 +303,7 @@ class Complex(object):
                or deg_prec is None),\
             "deg_prec has got to keep a integer value"
         
-        assert(type(plus) in {int, float} or plus is None),            "plus has got to be in {int, float} or None"
+        assert(type(plus) in {int, float} or plus is None),            f"plus has got to be in {int, float} or None, but is {type(plus).__name__}"
         
         re_part = precision(self.__re_part, prec)
         im_part = precision(self.__im_part, prec)
@@ -1007,8 +1007,10 @@ class Interruptable_thread(threading.Thread):
   
         try:
             self.__fcn(*self.__args, **self.__kwargs)
-        finally:
+        except SystemExit:
             pass
+        except Exception as ex:
+            raise Exception(ex)
         
     def get_id(self):
   
@@ -1047,7 +1049,7 @@ if main:
     t1.join()
     print("End")
     
-    t1 = Interruptable_thread(testFcn,1)
+    t1 = Interruptable_thread(testFcn,2)
     t1.start()
     sleep(1)
     t1.interrupt()
@@ -1131,17 +1133,5 @@ if main:
 if main:
     get_ipython().system('jupyter nbconvert minumbers.ipynb --to script')
 else:
-    print("numbers imported")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+    print("minumbers imported")
 
